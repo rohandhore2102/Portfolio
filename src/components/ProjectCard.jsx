@@ -105,7 +105,7 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
         </div>
         
         {/* Action Buttons - Full Width at Bottom */}
-        <div className={`grid grid-cols-2 gap-px ${darkMode ? "bg-gray-800" : "bg-gray-200"}`}>
+        <div className={`grid grid-cols gap-px ${darkMode ? "bg-gray-800" : "bg-gray-200"}`}>
           {project.demoLink && (
             <a
               href={project.demoLink}
@@ -117,16 +117,6 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
             </a>
           )}
           
-          {project.githubLink && (
-            <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`py-3 text-center text-sm font-medium ${darkMode ? "bg-gray-900 text-gray-300 hover:bg-gray-800" : "bg-white text-gray-700 hover:bg-gray-100"} transition-all`}
-            >
-              GitHub
-            </a>
-          )}
         </div>
       </div>
     </div>

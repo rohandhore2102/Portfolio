@@ -12,42 +12,48 @@ function ProjectsSection() {
     {
       title: "Ellora Tea",
       description: "A creative portfolio for Ellora Tea showcasing their product.",
-      technologies: ["Reactjs", "TailwindCss", "Expressjs", "AWS"],
+      technologies: ["React", "TailwindCss", "Expressjs", "AWS"],
       image: "/img/ElloraTea.png",
-      demoLink: "https://example.com",  
-      githubLink: "https://github.com/rohandhore2012"
+      demoLink: "https://elloratea.vercel.app/",  
+      
     },
     {
       title: "Rental Application",
       description: "A  android application for managing tenant rents and light bills",
       technologies: ["Java", "MySQL"],
       image: "/img/Rental.png",
-      demoLink: "https://example.com",  
-      githubLink: "https://github.com/rohandhore2012"
+      demoLink: "https://roomlogixshowcase.vercel.app/",  
+      
     },
     {
       title: "Hotel Management System",
       description: "A responsive Hotel Management System, User-Friendly and More features",
       technologies: ["Spring Boot", "Thymeleaf", "REST API", "Hibernate"],
       image: "/img/HotelManagement.png",
-      demoLink: "https://example.com",  
-      githubLink: "https://github.com/rohandhore2012"  
+      demoLink: "https://github.com/rohandhore2012/Hotel_Management-Springboot",  
+  
     },
     {
       title: "Invoice Generator",
       description: "A invoics generator software for generating invoices for your business",
       technologies: ["Java", "MySQL", "JavaFX"],
       image: "/img/invoice.png",
-      demoLink: "https://example.com",  
-      githubLink: "https://github.com/rohandhore2012"
+      demoLink: "https://github.com/rohandhore2012/InvoiceGenerator",  
+
     },
     {
       title: "College Notes",
       description: "A creative Notes making App with smooth animations and interactive elements.",
       technologies: ["Java", "XML", "Firebase", "Android Studio"],
       image: "img/NotesApp.png",
-      demoLink: "https://example.com",  
-      githubLink: "https://github.com/rohandhore2012"
+      demoLink: "www.example.com",  
+    },
+    {
+      title: "Url Shortener",
+      description: "A creative Notes making App with smooth animations and interactive elements.",
+      technologies: ["Java", "Spring Boot", "React", "Hibernate"],
+      image: "img/url-shortener.jpg",
+      demoLink: "https://github.com/rohandhore2012/URL_Shortener-Springaboot",  
     },
   
     
