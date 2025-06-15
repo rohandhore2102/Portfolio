@@ -34,6 +34,7 @@ function SkillsSection() {
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
   { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
   { name: "REST APIs", logo: "https://img.icons8.com/external-flat-juicy-fish/60/external-api-coding-and-development-flat-flat-juicy-fish.png" },
+  { name: "React", logo: "/img/React.png" },
 
   // Frameworks
   { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
@@ -43,13 +44,21 @@ function SkillsSection() {
 },
   { name: "JPA", logo: "https://img.icons8.com/fluency/48/database.png" 
 },
+{ name: "Flutter", logo: "/img/icon_flutter.png" },
 
+  // Datebase
+  { name: "MySQL", logo: "/img/MySQL.png" },
+  { name: "MongoDB", logo: "/img/Mongologo.png" },
+  { name: "Redis", logo: "/img/Redis-logo.png" },
+  
+  
   // Cloud & DevOps
-  { name: "AWS", logo: "https://img.icons8.com/color/48/amazon-web-services.png" },
+  { name: "AWS", logo: "/img/AWS icon.png" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   {name: "CI/CD",logo: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"},
   { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   {name: "Firebase",logo: "img/firebase.png"},
+  { name: "Cloudify", logo: "/img/cloudifyco-icon.svg" },
 
   // Tools & Technologies
   { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
@@ -91,6 +100,7 @@ function SkillsSection() {
                 <img 
                   src={skill.logo} 
                   alt={skill.name} 
+                  
                   className="w-full h-full object-contain" 
                   onError={(e) => {
                     e.target.onerror = null; 
