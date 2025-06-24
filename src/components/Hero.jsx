@@ -176,7 +176,7 @@ function HeroSection() {
                 }`}
               >
                 <img
-                  src={darkMode ? "img/mk.png" : "img/mk3.png"}
+                  src={darkMode ? "img/Responsive.png" : "img/mk3.png"}
                   alt="Developer"
                   className="w-full h-full object-contain object-center "
                 />

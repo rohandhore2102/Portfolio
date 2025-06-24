@@ -18,12 +18,19 @@ function ProjectsSection() {
       
     },
     {
-      title: "Rental Application",
+      title: "Room Logix App",
       description: "A  android application for managing tenant rents and light bills",
-      technologies: ["Java", "MySQL"],
+      technologies: ["Flutter | Dart"],
       image: "/img/Rental.png",
       demoLink: "https://roomlogixshowcase.vercel.app/",  
       
+    },
+    {
+      title: "College Notes",
+      description: "A creative Notes making App with smooth animations and interactive elements.",
+      technologies: ["Java", "XML", "Firebase", "Android Studio"],
+      image: "img/NotesApp.png",
+      demoLink: "https://collegenotes-showcase.vercel.app/",  
     },
     {
       title: "Hotel Management System",
@@ -41,13 +48,7 @@ function ProjectsSection() {
       demoLink: "https://github.com/rohandhore2012/InvoiceGenerator",  
 
     },
-    {
-      title: "College Notes",
-      description: "A creative Notes making App with smooth animations and interactive elements.",
-      technologies: ["Java", "XML", "Firebase", "Android Studio"],
-      image: "img/NotesApp.png",
-      demoLink: "www.example.com",  
-    },
+    
     {
       title: "Url Shortener",
       description: "A creative Notes making App with smooth animations and interactive elements.",

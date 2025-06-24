@@ -37,8 +37,9 @@ function SkillsSection() {
   { name: "React", logo: "/img/React.png" },
 
   // Frameworks
-  { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+  { name: "Spring Boot", logo: "/img/spring-boot.svg" },
   { name: "Spring MVC", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+  { name: "Spring Security", logo: "/img/spring-security.svg" },
   { name: "Hibernate", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" },
   { name: "Microservices", logo: "https://img.icons8.com/color/48/services--v1.png" 
 },
