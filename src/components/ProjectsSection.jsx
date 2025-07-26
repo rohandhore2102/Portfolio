@@ -13,7 +13,7 @@ function ProjectsSection() {
       title: "Ellora Tea",
       description: "A creative portfolio for Ellora Tea showcasing their product.",
       technologies: ["React", "TailwindCss", "Expressjs", "AWS"],
-      image: "/img/ElloraTea.png",
+      image: "/img/ElloraTea.webp",
       demoLink: "https://elloratea.vercel.app/",  
       
     },
@@ -21,7 +21,7 @@ function ProjectsSection() {
       title: "Room Logix App",
       description: "A  android application for managing tenant rents and light bills",
       technologies: ["Flutter | Dart"],
-      image: "/img/Rental.png",
+      image: "/img/Rental.webp",
       demoLink: "https://roomlogixshowcase.vercel.app/",  
       
     },
@@ -29,14 +29,14 @@ function ProjectsSection() {
       title: "College Notes",
       description: "A creative Notes making App with smooth animations and interactive elements.",
       technologies: ["Java", "XML", "Firebase", "Android Studio"],
-      image: "img/NotesApp.png",
+      image: "img/NotesApp.webp",
       demoLink: "https://collegenotes-showcase.vercel.app/",  
     },
     {
       title: "Hotel Management System",
       description: "A responsive Hotel Management System, User-Friendly and More features",
       technologies: ["Spring Boot", "Thymeleaf", "REST API", "Hibernate"],
-      image: "/img/HotelManagement.png",
+      image: "/img/HotelManagement.webp",
       demoLink: "https://github.com/rohandhore2012/Hotel_Management-Springboot",  
   
     },
@@ -44,7 +44,7 @@ function ProjectsSection() {
       title: "Invoice Generator",
       description: "A invoics generator software for generating invoices for your business",
       technologies: ["Java", "MySQL", "JavaFX"],
-      image: "/img/invoice.png",
+      image: "/img/invoice.webp",
       demoLink: "https://github.com/rohandhore2012/InvoiceGenerator",  
 
     },
@@ -53,7 +53,7 @@ function ProjectsSection() {
       title: "Url Shortener",
       description: "A creative Notes making App with smooth animations and interactive elements.",
       technologies: ["Java", "Spring Boot", "React", "Hibernate"],
-      image: "img/url-shortener.jpg",
+      image: "img/url-shortener.webp",
       demoLink: "https://github.com/rohandhore2012/URL_Shortener-Springaboot",  
     },
   

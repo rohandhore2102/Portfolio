@@ -18,7 +18,7 @@ function Footer() {
           
           <div className="flex space-x-6 mb-4 md:mb-0">
             
-              <SocialLink icon={<Github size={20} />} link={"https://github.com/rohandhore2012"} darkMode={darkMode} />
+              <SocialLink icon={<Github size={20} />} link={"https://github.com/rohandhore2102"} darkMode={darkMode} />
               <SocialLink icon={<Linkedin size={20} />} link={"https://www.linkedin.com/in/rohan-dhore-7351211a1/"} darkMode={darkMode} />
               <SocialLink icon={<Instagram size={20} />} link={"https://www.instagram.com/rohan_dhore_3303/"} darkMode={darkMode} />
               <SocialLink icon={<Mail size={20} />} link={"mailto:rohandhore2102@gmail.com"} darkMode={darkMode} />

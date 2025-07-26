@@ -34,32 +34,32 @@ function SkillsSection() {
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
   { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
   { name: "REST APIs", logo: "https://img.icons8.com/external-flat-juicy-fish/60/external-api-coding-and-development-flat-flat-juicy-fish.png" },
-  { name: "React", logo: "/img/React.png" },
+  { name: "React", logo: "/img/React.webp" },
 
   // Frameworks
-  { name: "Spring Boot", logo: "/img/spring-boot.svg" },
+  { name: "Spring Boot", logo: "/img/spring-boot.webp" },
   { name: "Spring MVC", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-  { name: "Spring Security", logo: "/img/spring-security.svg" },
+  { name: "Spring Security", logo: "/img/spring-security.webp" },
   { name: "Hibernate", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" },
   { name: "Microservices", logo: "https://img.icons8.com/color/48/services--v1.png" 
 },
   { name: "JPA", logo: "https://img.icons8.com/fluency/48/database.png" 
 },
-{ name: "Flutter", logo: "/img/icon_flutter.png" },
+{ name: "Flutter", logo: "/img/icon_flutter.webp" },
 
   // Datebase
-  { name: "MySQL", logo: "/img/MySQL.png" },
-  { name: "MongoDB", logo: "/img/Mongologo.png" },
-  { name: "Redis", logo: "/img/Redis-logo.png" },
+  { name: "MySQL", logo: "/img/MySQL.webp" },
+  { name: "MongoDB", logo: "/img/Mongologo.webp" },
+  { name: "Redis", logo: "/img/Redis-logo.webp" },
   
   
   // Cloud & DevOps
-  { name: "AWS", logo: "/img/AWS icon.png" },
+  { name: "AWS", logo: "/img/AWS icon.webp" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   {name: "CI/CD",logo: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"},
   { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-  {name: "Firebase",logo: "img/firebase.png"},
-  { name: "Cloudify", logo: "/img/cloudifyco-icon.svg" },
+  {name: "Firebase",logo: "img/firebase.webp"},
+  { name: "Cloudify", logo: "/img/cloudifyco-icon.webp" },
 
   // Tools & Technologies
   { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
