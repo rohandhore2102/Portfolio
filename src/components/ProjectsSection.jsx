@@ -37,7 +37,7 @@ function ProjectsSection() {
       description: "A responsive Hotel Management System, User-Friendly and More features",
       technologies: ["Spring Boot", "Thymeleaf", "REST API", "Hibernate"],
       image: "/img/HotelManagement.webp",
-      demoLink: "https://github.com/rohandhore2012/Hotel_Management-Springboot",  
+      demoLink: "https://github.com/rohandhore2102/Hotel_Management-Springboot",  
   
     },
     {
@@ -45,7 +45,7 @@ function ProjectsSection() {
       description: "A invoics generator software for generating invoices for your business",
       technologies: ["Java", "MySQL", "JavaFX"],
       image: "/img/invoice.webp",
-      demoLink: "https://github.com/rohandhore2012/InvoiceGenerator",  
+      demoLink: "https://github.com/rohandhore2102/InvoiceGenerator",  
 
     },
     
@@ -54,10 +54,17 @@ function ProjectsSection() {
       description: "A creative Notes making App with smooth animations and interactive elements.",
       technologies: ["Java", "Spring Boot", "React", "Hibernate"],
       image: "img/url-shortener.webp",
-      demoLink: "https://github.com/rohandhore2012/URL_Shortener-Springaboot",  
+      demoLink: "https://github.com/rohandhore2102/URL_Shortener-Springaboot",  
+    },
+
+    {
+      title: "Marvel MatchUp",
+      description: "A fun memory game where you match iconic Marvel superheroes to test your focus and speed!",
+      technologies: ["Java", "XML"],
+      image: "img/MarvelMatchup.webp",
+      demoLink: "https://github.com/rohandhore2102/MarvelMatchUp_Game",  
     },
   
-    
     
   ];
 
