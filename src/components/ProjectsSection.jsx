@@ -21,7 +21,7 @@ function ProjectsSection() {
       title: "Room Logix App",
       description: "A  android application for managing tenant rents and light bills",
       technologies: ["Flutter | Dart"],
-      image: "/img/Rental.webp",
+      image: "/img/RoomLogix2.webp",
       demoLink: "https://roomlogixshowcase.vercel.app/",  
       
     },
