@@ -12,7 +12,7 @@ function ProjectsSection() {
     {
       title: "Ellora Tea",
       description: "A creative portfolio for Ellora Tea showcasing their product.",
-      technologies: ["React", "TailwindCss", "Expressjs", "AWS"],
+      technologies: ["Spring Boot", "React", "AWS(EC2)", "PostgreSQL"],
       image: "/img/ElloraTea.webp",
       demoLink: "https://elloratea.in/",  
       

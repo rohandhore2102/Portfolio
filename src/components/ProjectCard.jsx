@@ -77,6 +77,7 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
               if (darkMode) {
                 switch(tech) {
                   case "React": bgColor = "bg-cyan-950/50"; textColor = "text-cyan-400"; break;
+                  case "Spring Boot": bgColor = "bg-cyan-950/50"; textColor = "text-cyan-400"; break;
                   case "TypeScript": bgColor = "bg-blue-950/50"; textColor = "text-blue-400"; break;
                   case "Tailwind CSS": bgColor = "bg-teal-950/50"; textColor = "text-teal-400"; break;
                   case "Recharts": bgColor = "bg-green-950/50"; textColor = "text-green-400"; break;
@@ -85,6 +86,7 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
               } else {
                 switch(tech) {
                   case "React": bgColor = "bg-cyan-100"; textColor = "text-cyan-800"; break;
+                  case "Spring Boot": bgColor = "bg-cyan-100"; textColor = "text-cyan-800"; break;
                   case "TypeScript": bgColor = "bg-blue-100"; textColor = "text-blue-800"; break;
                   case "Tailwind CSS": bgColor = "bg-teal-100"; textColor = "text-teal-800"; break;
                   case "Recharts": bgColor = "bg-green-100"; textColor = "text-green-800"; break;
