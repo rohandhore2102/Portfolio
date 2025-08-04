@@ -60,7 +60,6 @@ function SkillsSection() {
   {name: "CI/CD",logo: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"},
   { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   {name: "Firebase",logo: "img/firebase.webp"},
-  { name: "Cloudify", logo: "/img/cloudifyco-icon.webp" },
 
   // Tools & Technologies
   { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
