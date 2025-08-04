@@ -48,13 +48,14 @@ function SkillsSection() {
 { name: "Flutter", logo: "/img/icon_flutter.webp" },
 
   // Datebase
-  { name: "MySQL", logo: "/img/MySQL.webp" },
+  { name: "PostgreSQL", logo: "/img/Postgresql_elephant.webp" },
   { name: "MongoDB", logo: "/img/Mongologo.webp" },
   { name: "Redis", logo: "/img/Redis-logo.webp" },
   
   
   // Cloud & DevOps
   { name: "AWS", logo: "/img/AWS icon.webp" },
+  { name: "NGINX", logo: "/img/nginx.webp" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   {name: "CI/CD",logo: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"},
   { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
