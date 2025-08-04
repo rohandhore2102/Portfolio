@@ -14,7 +14,7 @@ function ProjectsSection() {
       description: "A creative portfolio for Ellora Tea showcasing their product.",
       technologies: ["React", "TailwindCss", "Expressjs", "AWS"],
       image: "/img/ElloraTea.webp",
-      demoLink: "https://elloratea.vercel.app/",  
+      demoLink: "https://elloratea.in/",  
       
     },
     {
