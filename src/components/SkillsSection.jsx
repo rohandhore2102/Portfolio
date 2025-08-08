@@ -28,26 +28,24 @@ function SkillsSection() {
     };
   }, []);
 
-  // Autoscrolling logic with infinite loop
+  // Auto-scrolling logic with infinite loop
   useEffect(() => {
     const container = scrollRef.current;
     let scrollInterval;
     if (container && visible && !isDragging) {
       scrollInterval = setInterval(() => {
-        const itemWidth = container.scrollWidth / 2; // Since we duplicated the content
+        const itemWidth = container.scrollWidth / 2; // since we duplicated the content
         if (container.scrollLeft >= itemWidth) {
           container.scrollLeft = 0;
         } else {
-          container.scrollLeft += 1; // Adjust for speed
+          container.scrollLeft += 1; // adjust for speed
         }
-      }, 20); // Adjust for smoothness
+      }, 20); // adjust for smoothness
     }
-    return () => {
-      clearInterval(scrollInterval);
-    };
+    return () => clearInterval(scrollInterval);
   }, [visible, isDragging]);
 
-  // Dragging logic
+  // Mouse dragging
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setStartX(e.pageX - scrollRef.current.offsetLeft);
@@ -69,21 +67,39 @@ function SkillsSection() {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX);
+    const walk = x - startX;
     scrollRef.current.scrollLeft = scrollLeft - walk;
 
-    // Handle wrapping during drag
     const container = scrollRef.current;
     const itemWidth = container.scrollWidth / 2;
-    if (container.scrollLeft < 0) {
-      container.scrollLeft += itemWidth;
-    } else if (container.scrollLeft >= itemWidth) {
-      container.scrollLeft -= itemWidth;
-    }
+    if (container.scrollLeft < 0) container.scrollLeft += itemWidth;
+    else if (container.scrollLeft >= itemWidth) container.scrollLeft -= itemWidth;
+  };
+
+  // Touch dragging
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
+    const walk = x - startX;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+
+    const container = scrollRef.current;
+    const itemWidth = container.scrollWidth / 2;
+    if (container.scrollLeft < 0) container.scrollLeft += itemWidth;
+    else if (container.scrollLeft >= itemWidth) container.scrollLeft -= itemWidth;
   };
 
   const technicalSkills = {
-    // ... (Your existing technicalSkills object)
     "Languages": [
       { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
       { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
@@ -144,84 +160,42 @@ function SkillsSection() {
 
         <div
           ref={scrollRef}
-          className="flex space-x-8 overflow-x-hidden"
+          className="flex space-x-4 overflow-x-hidden cursor-grab active:cursor-grabbing touch-pan-x"
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onTouchMove={handleTouchMove}
         >
-          {/* Render the skills list once */}
-          {skillsList.map(([category, skills]) => (
+          {skillsList.concat(skillsList).map(([category, skills], index) => (
             <div
-              key={category}
-              className={`flex-shrink-0 w-80 p-6 rounded-lg shadow-md transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
+              key={`${category}-${index}`}
+              className={`flex-shrink-0 w-64 sm:w-72 md:w-80 p-4 rounded-lg shadow-md transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
             >
-              <h3 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
+              <h3 className={`text-base sm:text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
                 {category}
               </h3>
-              <div className="grid grid-cols-3 gap-4">
-                {skills.map((skill, index) => (
+              <div className="grid grid-cols-3 gap-3">
+                {skills.map((skill, i) => (
                   <div
-                    key={index}
+                    key={i}
                     className={`
-                      flex flex-col items-center p-2 rounded 
+                      flex flex-col items-center p-1 rounded 
                       transition-all duration-300 transform hover:scale-105 h-full
                       ${visible ? 'animate-fade-in-up' : 'opacity-0 translate-y-6'}
                     `}
                   >
-                    <div className="flex items-center justify-center w-10 h-10 mb-1">
+                    <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 mb-1">
                       <img
                         src={skill.logo}
                         alt={skill.name}
                         className="w-full h-full object-contain"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.parentNode.querySelector('svg')?.classList.remove('hidden');
-                        }}
                       />
                       <Code size={20} className="hidden text-indigo-500" />
                     </div>
-                    <span className={`font-medium text-xs text-center ${darkMode ? 'text-white' : 'text-gray-800'}`}>
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Render the skills list a second time for the infinite loop effect */}
-          {skillsList.map(([category, skills], index) => (
-            <div
-              key={`${category}-clone-${index}`}
-              className={`flex-shrink-0 w-80 p-6 rounded-lg shadow-md transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
-            >
-              <h3 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
-                {category}
-              </h3>
-              <div className="grid grid-cols-3 gap-4">
-                {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className={`
-                      flex flex-col items-center p-2 rounded 
-                      transition-all duration-300 transform hover:scale-105 h-full
-                      ${visible ? 'animate-fade-in-up' : 'opacity-0 translate-y-6'}
-                    `}
-                  >
-                    <div className="flex items-center justify-center w-10 h-10 mb-1">
-                      <img
-                        src={skill.logo}
-                        alt={skill.name}
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.parentNode.querySelector('svg')?.classList.remove('hidden');
-                        }}
-                      />
-                      <Code size={20} className="hidden text-indigo-500" />
-                    </div>
-                    <span className={`font-medium text-xs text-center ${darkMode ? 'text-white' : 'text-gray-800'}`}>
+                    <span className={`font-medium text-[10px] sm:text-xs text-center ${darkMode ? 'text-white' : 'text-gray-800'}`}>
                       {skill.name}
                     </span>
                   </div>
