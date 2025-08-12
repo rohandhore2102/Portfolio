@@ -2,20 +2,21 @@ import React, { useEffect, useRef, useState, useContext } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { Briefcase, Github, Instagram, Linkedin, Locate, LocateFixed, LocateIcon, Mail, Twitter, User } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { Briefcase, Github, Instagram, Linkedin, LocateFixed, Mail } from "lucide-react";
 import ContactItem from "./ContactItem";
 import SocialLink from "./SocialLink";
 import { ThemeContext } from "../App";
-import { RiProfileLine, RiUser2Line, RiUserLine } from "@remixicon/react";
+import { RiUserLine } from "@remixicon/react";
 
 function ContactSection() {
   const { darkMode } = useContext(ThemeContext);
   const [visible, setVisible] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
   const ref = useRef(null);
 
-  // Observer for animation on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -28,19 +29,30 @@ function ContactSection() {
     return () => ref.current && observer.unobserve(ref.current);
   }, []);
 
-  // Form handler
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleCaptcha = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaToken) {
+      toast.error("Please complete the reCAPTCHA.");
+      return;
+    }
     setIsSubmitting(true);
 
     try {
-      const res = await axios.post("https://portfoliobackend-6i8u.onrender.com/api/send-email/Rohan", formData); // update this URL
+  const res = await axios.post(
+    `${import.meta.env.VITE_BackendAPI}/send-email/Rohan`,
+    { ...formData, "g-recaptcha-response": captchaToken }
+  );
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setCaptchaToken(null);
     } catch (err) {
       toast.error("Failed to send message. Try again.");
     } finally {
@@ -122,6 +134,15 @@ function ContactSection() {
                     className={`w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 ${darkMode ? 'bg-gray-700 text-white border-gray-600' : 'bg-gray-50 text-gray-900 border-gray-300'}`}
                   />
                 </div>
+
+                {/* reCAPTCHA */}
+                <div className="mb-6">
+                  <ReCAPTCHA
+                    sitekey={import.meta.env.VITE_SITE_KEY}
+                    onChange={handleCaptcha}
+                  />
+                </div>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -146,9 +167,7 @@ function ContactSection() {
               </p>
               <div className="space-y-8">
                 <ContactItem icon={<RiUserLine size={20} />} title="Name" value="Rohan Dhore" darkMode={darkMode} />
-
                 <ContactItem icon={<Mail size={20} />} title="Email" value="rohandhore2102@gmail.com" darkMode={darkMode} />
-                
                 <ContactItem icon={<LocateFixed size={20} />} title="Location" value="Pune, Maharashtra" darkMode={darkMode} />
               </div>
               <div className="mt-14">
