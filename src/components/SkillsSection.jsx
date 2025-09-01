@@ -124,6 +124,7 @@ function SkillsSection() {
       { name: "Firebase", logo: "img/firebase.webp" },
       { name: "GitHub Actions", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       { name: "NGINX", logo: "/img/nginx.webp" },
+      { name: "Oracle", logo: "/img/oracle.webp" }
     ],
     "Databases": [
       { name: "PostgreSQL", logo: "/img/Postgresql_elephant.webp" },
