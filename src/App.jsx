@@ -8,6 +8,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import './index.css';
+import CertificatesSection from "./components/CertificatesSection";
+
 
 // Theme context for dark/light mode
 export const ThemeContext = React.createContext();
@@ -70,6 +72,7 @@ export default function App() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <CertificatesSection/>
           <ContactSection />
         </main>
         <Footer />
