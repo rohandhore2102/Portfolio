@@ -26,6 +26,7 @@ function CertificatesSection() {
     },
   ];
 
+  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,6 +44,7 @@ function CertificatesSection() {
     },
   };
 
+  // Certificate Modal
   const CertificateModal = ({ isOpen, onClose, certificate }) => {
     if (!isOpen || !certificate) return null;
 
@@ -56,7 +58,9 @@ function CertificatesSection() {
           onClick={onClose}
         >
           <motion.div
-            className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden"
+            className={`relative rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden ${
+              darkMode ? "bg-gray-900" : "bg-white"
+            }`}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -64,17 +68,33 @@ function CertificatesSection() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+            <div
+              className={`p-4 border-b flex justify-between items-center ${
+                darkMode ? "border-gray-700" : "border-gray-200"
+              }`}
+            >
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 truncate">
+                <h3
+                  className={`text-lg md:text-xl font-bold truncate ${
+                    darkMode ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
                   {certificate.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 truncate">
+                <p
+                  className={`text-sm truncate ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   {certificate.issuer} • {certificate.date}
                 </p>
               </div>
               <button
-                className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                className={`p-2 rounded-full transition-colors ${
+                  darkMode
+                    ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                }`}
                 onClick={onClose}
               >
                 <X size={20} />
@@ -82,7 +102,11 @@ function CertificatesSection() {
             </div>
 
             {/* Certificate Image */}
-            <div className="w-full h-[calc(90vh-80px)] flex items-center justify-center bg-gray-50 dark:bg-gray-800 p-4">
+            <div
+              className={`w-full h-[calc(90vh-80px)] flex items-center justify-center p-4 ${
+                darkMode ? "bg-gray-800" : "bg-gray-50"
+              }`}
+            >
               <img
                 src={certificate.fullImage || certificate.preview}
                 alt={certificate.title}
@@ -108,6 +132,7 @@ function CertificatesSection() {
     >
       <div className="max-w-7xl mx-auto">
         <motion.div variants={itemVariants}>
+          {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               My{" "}
@@ -126,6 +151,7 @@ function CertificatesSection() {
             </p>
           </div>
 
+          {/* Certificates Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -141,6 +167,7 @@ function CertificatesSection() {
                     : "bg-white border border-gray-200"
                 }`}
               >
+                {/* Certificate Preview */}
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={certificate.preview}
@@ -150,31 +177,42 @@ function CertificatesSection() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 </div>
 
+                {/* Certificate Info */}
                 <div className="p-4">
-  <h3 className="font-semibold text-gray-900 dark:text-gray-500 text-sm mb-1 line-clamp-2">
-    {certificate.title}
-  </h3>
-  <div className="flex items-center justify-between">
-    <p className="text-xs text-gray-900 dark:text-gray-300">
-      {certificate.issuer}
-    </p>
-    <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400">
-      {certificate.date}
-    </span>
-  </div>
-</div>
+                  <h3
+                    className={`font-semibold text-sm mb-1 line-clamp-2 ${
+                      darkMode ? "text-gray-100" : "text-gray-900"
+                    }`}
+                  >
+                    {certificate.title}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <p
+                      className={`text-xs ${
+                        darkMode ? "text-gray-300" : "text-gray-700"
+                      }`}
+                    >
+                      {certificate.issuer}
+                    </p>
+                    <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400">
+                      {certificate.date}
+                    </span>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
       </div>
 
+      {/* Modal */}
       <CertificateModal
         isOpen={!!selectedCert}
         onClose={() => setSelectedCert(null)}
         certificate={selectedCert}
       />
 
+      {/* Line Clamp Utility */}
       <style jsx global>{`
         .line-clamp-2 {
           display: -webkit-box;
