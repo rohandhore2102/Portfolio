@@ -119,7 +119,7 @@ function SkillsSection() {
     ],
     "Cloud & DevOps": [
       { name: "AWS", logo: "/img/AWS icon.webp" },
-      { name: "Oracle", logo: "/img/oracle.webp" }
+      { name: "Oracle", logo: "/img/oracle.webp" },
       { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
       { name: "Jenkins (CI/CD)", logo: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png" },
       { name: "Firebase", logo: "img/firebase.webp" },
