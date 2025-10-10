@@ -65,7 +65,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center lg:space-x-8">
-            {["home", "about", "skills", "projects", "contact"].map((section) => (
+            {["home", "about", "skills", "projects", "certificates", "contact"].map((section) => (
               <NavLink key={section} onClick={() => scrollToSection(section)} darkMode={darkMode}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </NavLink>
@@ -116,7 +116,7 @@ function Navbar() {
       {isMenuOpen && (
         <div className={`md:hidden transition-all duration-300 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {["home", "about", "skills", "projects", "contact"].map((section) => (
+            {["home", "about", "skills", "projects", "certificates", "contact"].map((section) => (
               <MobileNavLink key={section} onClick={() => scrollToSection(section)} darkMode={darkMode}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </MobileNavLink>
