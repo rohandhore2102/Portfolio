@@ -78,7 +78,7 @@ export default function App() {
 
         {/* Resume download button */}
         <a
-          href="/files/Rohan Resume - 20251010.pdf"
+          href="/files/Rohan Resume 06112025.pdf"
           rel="noopener noreferrer"
           target="_blank"
           className={`fixed z-10 flex gap-1 md:gap-3 bottom-24 right-5 px-4 py-2 rounded-full shadow-lg transition-all duration-300 ${
