@@ -11,11 +11,25 @@ function CertificatesSection() {
 
   const certificates = [
     {
-      title: "Oracle Cloud Infrastructure AI Foundations",
+      title: "Oracle Cloud Infrastructure 2025 AI Foundations",
       issuer: "Oracle",
       date: "Aug 2025",
       preview: "/img/Oracle-ai.webp",
       fullImage: "/img/Oracle-ai.webp",
+    },
+    {
+      title: "Oracle Cloud Infrastructure 2025 Certified Developer Professional",
+      issuer: "Oracle",
+      date: "Aug 2025",
+      preview: "/img/Oracle-Developer.webp",
+      fullImage: "/img/Oracle-Developer.webp",
+    },
+    {
+      title: "Oracle Cloud Infrastructure 2025 Certified DevOps Professional",
+      issuer: "Oracle",
+      date: "Aug 2025",
+      preview: "/img/Oracle-DevOps.webp",
+      fullImage: "/img/Oracle-DevOps.webp",
     },
     {
       title: "Communication Skills",
