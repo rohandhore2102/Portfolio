@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://rohandhore-portfolio.vercel.app/sitemap.xml
+Sitemap: https://www.rohandhore.in/sitemap.xml
 
 # Optional: block sensitive folders (if any)
 # Disallow: /admin/
