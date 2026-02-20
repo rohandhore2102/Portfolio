@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "rohandhore-portfolio.vercel.app"
+        }
+      ],
+      "destination": "https://www.rohandhore.in/",
+      "permanent": true
+    }
+  ]
+}
