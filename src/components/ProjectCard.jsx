@@ -79,8 +79,8 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
                   case "React": bgColor = "bg-cyan-950/50"; textColor = "text-cyan-400"; break;
                   case "Spring Boot": bgColor = "bg-cyan-950/50"; textColor = "text-cyan-400"; break;
                   case "TypeScript": bgColor = "bg-blue-950/50"; textColor = "text-blue-400"; break;
-                  case "Tailwind CSS": bgColor = "bg-teal-950/50"; textColor = "text-teal-400"; break;
-                  case "Recharts": bgColor = "bg-green-950/50"; textColor = "text-green-400"; break;
+                  case "Next.js": bgColor = "bg-teal-950/50"; textColor = "text-teal-400"; break;
+                  case "Java": bgColor = "bg-green-950/50"; textColor = "text-green-400"; break;
                   default: bgColor = "bg-gray-800"; textColor = "text-gray-300";
                 }
               } else {
@@ -88,8 +88,8 @@ const ProjectCard = ({ project, darkMode, visible, delay = 0 }) => {
                   case "React": bgColor = "bg-cyan-100"; textColor = "text-cyan-800"; break;
                   case "Spring Boot": bgColor = "bg-cyan-100"; textColor = "text-cyan-800"; break;
                   case "TypeScript": bgColor = "bg-blue-100"; textColor = "text-blue-800"; break;
-                  case "Tailwind CSS": bgColor = "bg-teal-100"; textColor = "text-teal-800"; break;
-                  case "Recharts": bgColor = "bg-green-100"; textColor = "text-green-800"; break;
+                  case "Next.js": bgColor = "bg-teal-100"; textColor = "text-teal-800"; break;
+                  case "Java": bgColor = "bg-green-100"; textColor = "text-green-800"; break;
                   default: bgColor = "bg-gray-200"; textColor = "text-gray-800";
                 }
               }
