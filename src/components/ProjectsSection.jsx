@@ -11,7 +11,7 @@ function ProjectsSection() {
   const projects = [
     {
       title: "RawStrings RD",
-      description: "A modern guitar platform for learning and playing music.",
+      description: "A music learning platform for guitar chords, tabs, tutorials, and practice.",
       technologies: ["Next.js", "React", "Tailwind CSS", "Markdown CMS",],
       image: "/img/Rawstrings.webp",
       demoLink: "https://rawstrings.in/"
