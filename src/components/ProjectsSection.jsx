@@ -10,6 +10,13 @@ function ProjectsSection() {
 
   const projects = [
     {
+      title: "RawStrings RD",
+      description: "A modern guitar platform for learning and playing music.",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Markdown CMS",],
+      image: "/img/Rawstrings.webp",
+      demoLink: "https://rawstrings.in/"
+    },
+    {
       title: "Ellora Tea",
       description: "A creative portfolio for Ellora Tea showcasing their product.",
       technologies: ["Spring Boot", "React", "AWS (EC2)", "PostgreSQL"],
@@ -25,13 +32,7 @@ function ProjectsSection() {
       demoLink: "https://roomlogixshowcase.vercel.app/",  
       
     },
-    {
-      title: "RawStrings RD",
-      description: "A modern guitar platform for learning and playing music.",
-      technologies: ["Next.js", "React", "Tailwind CSS", "Markdown CMS",],
-      image: "/img/Rawstrings.webp",
-      demoLink: "https://rawstrings.in/"
-    },
+    
     {
       title: "College Notes",
       description: "A creative Notes making App with smooth animations and interactive elements.",
