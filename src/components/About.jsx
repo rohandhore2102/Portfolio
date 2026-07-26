@@ -142,7 +142,7 @@ function AboutSection() {
             <div className="relative">
               <div ref={imageRef} className={` rounded-2xl overflow-hidden border-8 ${darkMode ? 'border-gray-700' : 'border-gray-100'}`}>
                 <img 
-                  src="/img/profile.webp" 
+                  src="/img/profile2.webp" 
                   alt="About Me" 
                   className="w-full h-full object-contain"
                 />
